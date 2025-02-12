@@ -25,7 +25,6 @@ class ShopListApiController extends Controller
         if ($Product) {
             return response()->json(['message' => 'Product already exists in ShopList'], 400);
         }
-
         $shopList = ShopList::create($validated);
         return response()->json($shopList, 201);
     }
